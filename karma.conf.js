@@ -15,7 +15,9 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-
+      // mobx library (notice: use umd)
+      {pattern: 'node_modules/mobx/lib/mobx.umd.js', watched: false, served: true, included: true},
+      
       // Spec files
       // We need to disable watch true, otherwhise the specs run twice on spec file change, because
       // the created webpack bundle is also be watched
